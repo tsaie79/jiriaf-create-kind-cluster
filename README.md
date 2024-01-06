@@ -6,7 +6,7 @@ This project is a Kubernetes setup that includes custom scheduling and metrics c
 The `kind-config.yaml` file is used to configure a local Kubernetes cluster using Docker (via the Kubernetes IN Docker - kind - tool).
 
 ## kube-scheduler
-The `kube-scheduler` directory contains files related to the Kubernetes scheduler. The `kube-scheduler.yaml` and `scheduler-config.yaml` files are used to configure a custom scheduler for the Kubernetes cluster. The `create_scheduler.sh` script is likely used to create or start the custom scheduler. The `job.yaml` file defines a Kubernetes Job that might be used for testing or other purposes.
+The `kube-scheduler` directory contains files related to the Kubernetes scheduler. The `kube-scheduler.yaml` and `scheduler-config.yaml` files are used to configure a custom scheduler `my-scheduler` for the Kubernetes cluster. The `create_scheduler.sh` script is likely used to create or start the custom scheduler. The `job.yaml` file defines a Kubernetes Job that might be used for testing or other purposes. Notice that both default and custom schedulers can be used in the same Kubernetes cluster by specifying the scheduler name in the `schedulerName` field of a Pod's specification.
 
 ### Test
 The `test` directory within `kube-scheduler` contains scripts and configuration files for testing the custom scheduler (`my-scheduler-test.yaml`) and the default Kubernetes scheduler (`default-scheduler-test.yaml`). The `test.sh` script is likely used to run these tests.
