@@ -9,6 +9,13 @@ spec:
   template:
     spec:
       restartPolicy: Never
+      affinity:  # Add this block
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/master
+                operator: DoesNotExist
       containers:
       - name: 'worker'
         image: 'docker.io/library/busybox'
@@ -25,6 +32,3 @@ spec:
           - path: "data.txt"
             fieldRef:
               fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
-      nodeSelector:
-        kubernetes.io/os: linux
-        kubernetes.io/hostname: kind-control-plane
