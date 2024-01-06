@@ -7,8 +7,8 @@ spec:
   parallelism: 3
   completionMode: Indexed
   template:
-    spec:
-      # schedulerName: my-scheduler
+    # spec:
+    #   # schedulerName: my-scheduler
       restartPolicy: Never
       affinity:  # Add this block
         nodeAffinity:
