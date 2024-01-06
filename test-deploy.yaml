@@ -1,0 +1,14 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "myapp1"
+  namespace: default
+  labels:
+    app: "myapp"
+spec:
+  # schedulerName: my-scheduler
+  containers:
+  - name: myapp
+    image: "debian:latest"
+    command: ["sleep", "100"]
