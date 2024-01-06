@@ -4,10 +4,10 @@ nodes:
 - role: control-plane
   image:  kindest/node:v1.23.17
   extraMounts:
-  - hostPath: /Users/tsai/Downloads/kind/kube-scheduler
+  - hostPath: /home/tsai/JIRIAF/jiriaf-create-kind-cluster/kube-scheduler
     containerPath: /root/mount
 - role: worker
   image: kindest/node:v1.23.17
   extraMounts:
-  - hostPath: /Users/tsai/Downloads/kind/kube-scheduler
+  - hostPath: /home/tsai/JIRIAF/jiriaf-create-kind-cluster/kube-scheduler
     containerPath: /root/mount
