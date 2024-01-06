@@ -6,7 +6,7 @@ clientConnection:
 profiles:
 - schedulerName: my-scheduler
 extenders:
-  - urlPrefix: "http://localhost:8888/"
+  - urlPrefix: "http://jiriaf2301:8888/"
     filterVerb: "filter"
     prioritizeVerb: "prioritize"
     weight: 1
