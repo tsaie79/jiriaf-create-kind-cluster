@@ -8,7 +8,7 @@ spec:
   completionMode: Indexed
   template:
     spec:
-      # schedulerName: my-scheduler # change this line to set the scheduler
+      schedulerName: my-scheduler # change this line to set the scheduler
       restartPolicy: Never
       affinity:  # Add this block
         nodeAffinity:
